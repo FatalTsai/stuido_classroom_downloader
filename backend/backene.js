@@ -1,7 +1,7 @@
 var fetch = require('node-fetch')
 var fs = require('fs')
-
-var api_url = ' https://d17lx9ucc6k9fc.cloudfront.net/studioclassroom/202002/SC20200228.mp4'
+var date ='0229'
+var api_url = `https://d17lx9ucc6k9fc.cloudfront.net/studioclassroom/202002/SC2020${date}.mp4`
 
 
 var   downloadBlock = async function(url){
@@ -13,7 +13,7 @@ var   downloadBlock = async function(url){
     // 可以透過 blob(), json(), text() 轉成可用的資訊
     return response.buffer();
   }).then((jsonData) => {
-    fs.writeFileSync('./source/test.mp4',jsonData)
+    fs.writeFileSync(`./source/${date}.mp4`,jsonData)
     //console.log('jsonData = ' +jsonData);
   }).bind(this)
 
@@ -21,8 +21,7 @@ var   downloadBlock = async function(url){
 
 (async function () {  
 
- var buffer = downloadBlock(api_url)
-  console.log(buffer)
-  fs.writeFileSync('./source/test.mp4',buffer)
+ downloadBlock(api_url)
+  
 
 })
