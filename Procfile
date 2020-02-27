@@ -1,2 +1,2 @@
 work: dir
-web: node .\backend\backene.js
+work: node .\backend\backene.js
