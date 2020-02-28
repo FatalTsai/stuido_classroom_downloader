@@ -1,11 +1,11 @@
 {
-  "name": "studio_classroom",
+  "name": "node-js-getting-started",
   "version": "0.3.0",
   "description": "A sample Node.js app using Express 4",
   "engines": {
     "node": "12.x"
   },
-  "main": "backend/backene.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "node test.js"
@@ -26,7 +26,6 @@
   "keywords": [
     "node",
     "heroku",
-    "node-fetch",
     "express"
   ],
   "license": "MIT"
